@@ -1,0 +1,32 @@
+.org-list {
+  background: #F2F2F2;
+  padding: 50px 0;
+
+  &__item {
+    margin: 0 auto;
+    color: #2c2c2c;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 0s;
+    opacity: 0;
+
+    a {
+      display: inline;
+    }
+  }
+
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

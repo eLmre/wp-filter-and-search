@@ -1,0 +1,22 @@
+.donor-title {
+  &__img {
+    display: block;
+    margin: 40px auto 20px;
+  }
+  &__text {
+    color: #E87721;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  @include mq(false, tablet) {
+    &__text {
+      font-size: 35px;
+      line-height: 1.4em;
+    }
+  }
+}

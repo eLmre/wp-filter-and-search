@@ -1,0 +1,249 @@
+.filter {
+  margin: 50px auto;
+  border: 1px solid #E6E6E6;
+  box-sizing: border-box;
+
+  @include mq(false, tablet) {
+    border: none;
+    margin: 30px auto 0 auto;
+  }
+
+  &__row {
+    border-bottom: 1px solid #E6E6E6;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    transition: background 0.2s linear;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.hovered {
+      background: #FBFBFB;
+      @include mq(false, tablet) {
+        background: transparent;
+      }
+    }
+
+    @include mq(false, tablet) {
+      border-left: 1px solid #E6E6E6;
+      border-right: 1px solid #E6E6E6;
+      &:last-child {
+        border-bottom: 1px solid #E6E6E6;
+      }
+    }
+  }
+
+  &__row_search {
+    padding: 35px 40px;
+    @include mq(false, tablet) {
+      border-left: none;
+      border-right: none;
+      padding: 0 20px 20px;
+    }
+  }
+
+  input {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+  }
+
+  &__input-btn {
+    display: flex;
+    margin-left: -1px;
+  }
+
+  &__search {
+    color: #fff;
+    background-color: #007395;
+    font-family: $font-family;
+    font-size: 22px;
+    line-height: 26px;
+    border: none;
+    padding: 0 19px;
+    position: relative;
+    z-index: 2;
+    border-radius: 0 3px 3px 0;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #007395;
+      box-shadow: none;
+      outline: none;
+      border: none;
+    }
+
+    @include mq(false, tablet) {
+      font-size: 18px;
+    }
+  }
+
+  &__input {
+    font-family: $font-family;
+    font-size: 22px;
+    line-height: 26px;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 3px 0 0 3px;
+    padding: 11px 15px !important;
+
+    &::placeholder {
+      color: #B3B3B3;
+      opacity: 1;
+    }
+
+    @include mq(false, tablet) {
+      font-size: 18px;
+    }
+  }
+
+  &__collapse {
+    color: #626266;
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 100%;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    z-index: 1;
+    padding: 35px 40px;
+
+    @include mq(false, tablet) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: #626266;
+      outline: none;
+      box-shadow: none;
+      border: none;
+
+      &:after {
+        color: #626266;
+      }
+    }
+
+    &:after {
+      content: "\f068";
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Font Awesome 5 Pro';
+      color: #B3B3B3;
+      line-height: unset;
+      font-size: 18px;
+      right: 40px;
+      position: absolute;
+      z-index: 0;
+      cursor: pointer;
+    }
+
+    &.collapsed:after {
+      content: "\f067";
+    }
+
+    @include mq(false, tablet) {
+      padding: 20px;
+
+      &:after {
+        right: 20px;
+      }
+    }
+
+  }
+
+  &__collapse-text {
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__collapse-overlay {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+      color: #626266;
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  .btn-view-all {
+    background: #F2F2F2;
+    border-radius: 40px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #999999;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    border: none;
+    padding: 0 16px;
+    line-height: 23px;
+    margin-left: 15px;
+    position: relative;
+    z-index: 2;
+
+    .ico {
+      color: #999999;
+      fill: #999999;
+      margin-right: 3px;
+      line-height: 23px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border: none;
+      color: #fff;
+      background: #007b9d;
+      cursor: pointer;
+
+      .ico {
+        color: #fff;
+        fill: #fff;
+      }
+    }
+
+    &.active {
+      color: #fff;
+      background: #007b9d;
+
+      .ico {
+        color: #fff;
+        fill: #fff;
+      }
+    }
+
+    &:disabled {
+      opacity: 1;
+      cursor: default;
+    }
+
+  }
+
+}

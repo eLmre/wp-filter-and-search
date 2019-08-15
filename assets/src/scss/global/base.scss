@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background-image: none;
+  background-color: transparent;
+  resize: none;
+  outline: 0;
+  font-family: $font-family;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  color: $color-placeholder;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  color: $color-placeholder;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  color: $color-placeholder;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  color: $color-placeholder;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  opacity: 0;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  opacity: 0;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+textarea {
+  white-space: normal !important;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+a:focus, a:active {
+  outline : 0;
+  box-shadow: none;
+}
+
+html {
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  min-width: 375px;
+  -webkit-text-size-adjust: none;
+  background-color: #fff;
+  color: $color-font;
+  font-family: $font-family, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-main;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-hover;
+    text-decoration: none;
+  }
+
+  img {
+    border: none !important;
+  }
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: $font-family;
+  margin: 0;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 59px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h5 {
+
+}
+
+@include mq(false, tablet) {
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  h4 {
+
+  }
+
+  h5 {
+
+  }
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* iOS bug-fix */
+[data-toggle~="collapse"],
+[data-toggle~="modal"] {
+  cursor: pointer;
+}
+
+svg path {
+  fill: inherit;
+}

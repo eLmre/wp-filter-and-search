@@ -1,0 +1,76 @@
+.load-more {
+  color: #fff;
+  background-color: #007395;
+  font-family: $font-family;
+  font-size: 19px;
+  line-height: 100%;
+  border: none;
+  padding: 15px 46px;
+  position: relative;
+  border-radius: 2px;
+  margin: 10px auto 0;
+  overflow: hidden;
+
+  &:focus,
+  &:hover {
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.active {
+    cursor: wait;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #007395;
+      z-index: 3;
+    }
+
+    &:after {
+      content: '\f3f4';
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Font Awesome 5 Pro';
+      color: #fff;
+      line-height: unset;
+      font-size: 26px;
+      z-index: 4;
+      padding: 15px 46px;
+      animation: rotating 1s linear infinite;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      opacity: 0.7;
+    }
+
+  }
+
+}
+
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

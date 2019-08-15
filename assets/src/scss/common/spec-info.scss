@@ -1,0 +1,53 @@
+.spec-info {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding-top: 63px;
+  padding-bottom: 50px;
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-family: $font-family;
+    font-size: 30px;
+    line-height: 100%;
+    color: #E87721;
+    letter-spacing: 0.03em;
+    margin: 0 auto 49px;
+    padding: 0 !important;
+  }
+
+  &__block {
+    font-family: $font-family;
+    color: #626266;
+    font-size: 18px;
+    line-height: 150.84%;
+    text-align: center;
+    margin-top: 30px;
+
+    &-inner {
+      background: transparent;
+      padding: 5px 0;
+      height: auto;
+    }
+  }
+
+  &__block_alt {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 0;
+    min-height: 100%;
+  }
+
+  &__block_alt &__block-inner {
+    background: #f2f2f2;
+    padding: 20px;
+    height: 100%;
+  }
+
+  &__col {
+    padding: 0 30px;
+  }
+
+}
