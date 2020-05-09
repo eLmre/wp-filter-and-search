@@ -1,8 +1,8 @@
 .taxonomy {
-  padding: 0 40px 25px;
+  padding: 30px 40px 25px;
 
   @include mq(false, tablet) {
-    padding: 5px 20px 5px;
+    padding: 20px 20px 5px;
   }
 
   &__term {
